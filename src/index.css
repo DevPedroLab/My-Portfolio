@@ -1,0 +1,433 @@
+@import "./App.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+    color: var(--text);
+    font-family: "Outfit", sans-serif;
+    user-select: none;
+}
+
+html, body {
+    background: var(--primary);
+    overflow-x: hidden;
+}
+
+.main-info-container {
+    position: absolute;
+    top: 20vh;
+    left: 26vw;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    background: var(--primary);
+    padding: 2.25rem 3rem;
+    padding-bottom: 2.5rem;
+}
+
+.main-info-subcontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.my-image {
+    width: 125px;
+    height: 125px;
+    background: var(--photo-bg);
+    outline: solid 10px var(--photo-bg);
+    border-radius: 100%;
+    margin-right: 2.5rem;
+    transform: rotate(12deg);
+}
+
+.my-name {
+    font-family: "Tiny5", sans-serif;
+    font-weight: bold;
+    padding-right: 1rem;
+    text-transform: uppercase;
+    font-size: 2.75em;
+}
+
+.my-stack {
+    user-select: text;
+    margin-top: 10px;
+    opacity: 0.75;
+}
+
+.icons-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 10px;
+}
+
+.icons-container span {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 0.3s ease;
+}
+
+.icons-container span:hover {
+    transform: scale(1.2);
+}
+
+.tag {
+    position: absolute;
+    top: 60%;
+    left: 29.25%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    opacity: 0.75;
+}
+
+.tag-icon {
+    animation: fade 3s infinite linear;
+    color: var(--accent);
+}
+
+.skill-container img {
+    width: 75px;
+}
+
+.skills-section, .projects-section {
+    position: sticky;
+    margin-top: 8rem;
+    background: var(--primary);
+}
+
+.projects-section {
+    margin-top: 1.5rem;
+}
+
+.skills-section #main-title, .projects-section #main-title, .contact-section #main-title {
+    margin-left: 3rem;
+    padding: 1.25rem 0;
+    padding-top: 3rem;
+    font-family: "Tiny5", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.skills-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.skill-container {
+    padding: 2rem 3rem;
+    padding-bottom: 4rem;
+}
+
+.skill-container .header-title {
+    margin: 8px 0;
+    margin-bottom: 10px;
+    font-family: "Cal Sans", sans-serif;
+}
+
+.skill-container .description, .project-container .description {
+    opacity: 0.75;
+    user-select: text;
+}
+
+::selection {
+    background: var(--accent);
+    color: rgb(255, 255, 255);
+}
+
+.skill-container img {
+    width: 62.5px;
+}
+
+.project-container img {
+    height: 260px;
+}
+
+#figma-img {
+    width: 42.5px;
+}
+
+#api-img {
+    margin: -1rem;
+    width: 100px;
+}
+
+#html-img {
+    margin: -10px;
+    width: 82.5px;
+}
+
+.project-container img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    object-fit: cover;
+}
+
+.project-container a {
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.project-container a:hover {
+    text-decoration: underline;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2.5rem;
+    background: rgba(40, 30, 48, 0.237);
+    border-radius: 20px;
+    transition: all 0.4s ease;
+}
+
+/* .project-container:hover {
+    transform: translateY(-10px);
+    border-color: rgba(177, 142, 239, 0.35);
+    box-shadow: 0 15px 35px rgba(177, 142, 239, 0.1);
+}
+
+.project-container:hover img {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+} */
+
+.project-container .header-title {
+    font-family: "Cal Sans", sans-serif;
+    font-size: 2em;
+    background: linear-gradient(90deg, var(--accent), #9a6eeb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.projects-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 3rem 2.25rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.contact-section {
+    margin-top: 8rem;
+    padding-bottom: 6rem;
+}
+
+.contact-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin: 3rem 2.25rem;
+}
+
+.contact-card {
+    background: rgba(40, 30, 48, 0.237);
+    border-radius: 20px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(177, 142, 239, 0.15);
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(177, 142, 239, 0.35);
+}
+
+.contact-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-title {
+    font-family: "Cal Sans", sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, var(--accent), #9a6eeb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact-description {
+    opacity: 0.85;
+    line-height: 1.6;
+    user-select: text;
+}
+
+.contact-description strong {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.contact-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 4rem 1rem;
+}
+
+.contact-button {
+    padding: 1.2rem 2.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.contact-button.primary {
+    background: var(--accent);
+    color: var(--primary);
+}
+
+.contact-button.secondary {
+    background: rgba(177, 142, 239, 0.1);
+    color: var(--accent);
+    border: 2px solid var(--accent);
+}
+
+.contact-button:hover {
+    transform: scale(1.025);
+}
+
+.faq-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2.25rem;
+}
+
+.faq-title {
+    font-family: "Cal Sans", sans-serif;
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 3rem;
+    background: linear-gradient(90deg, var(--accent), #9a6eeb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.faq-item {
+    background: rgba(40, 30, 48, 0.237);
+    border-radius: 16px;
+    padding: 2rem;
+    border-left: 4px solid var(--accent);
+}
+
+.faq-item h3 {
+    font-family: "Cal Sans", sans-serif;
+    font-size: 1.4em;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.faq-item p {
+    opacity: 0.85;
+    line-height: 1.6;
+    user-select: text;
+}
+
+@keyframes fade {
+    0% {
+      opacity: 0.75;
+    }
+    
+    50% {
+      opacity: 0.25;
+    }
+
+    100% {
+      opacity: 0.75;
+    }
+}
+
+@keyframes slide-y {
+    from {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-info-container {
+        padding: 2.25rem;
+        position: absolute;
+        left: 0;
+    }
+
+    .contact-board {
+        grid-template-columns: 1fr;
+    }
+
+    .tag {
+        position: absolute;
+        top: 67.25%;
+        left: 39.5%;
+    }
+
+    .skills-board, .projects-board {
+        grid-template-columns: 1fr;
+    }
+
+    .project-container {
+        margin-top: 1rem;
+        padding: 2rem;
+    }
+
+    .projects-board {
+        margin: 3rem 1.5rem;
+        gap: 2rem;
+    }
+
+    .contact-actions {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1.5rem;
+    }
+    
+    .contact-button {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-section {
+        padding: 0 1.5rem;
+    }
+}

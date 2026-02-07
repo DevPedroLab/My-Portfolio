@@ -1,0 +1,16 @@
+:root {
+    --primary: rgb(27, 18, 35);
+    --secondary: rgb(27, 22, 30);
+    --accent: #B18EEF;
+
+    --text: rgb(239, 239, 239);
+    --photo-bg: rgba(177, 142, 239, 0.053);
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24
+}
