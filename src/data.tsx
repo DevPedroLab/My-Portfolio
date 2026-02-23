@@ -6,7 +6,7 @@ export const shiny_stack_text = () => (
         text="- Fullstack Developer & Software Engineer"
         speed={5}
         delay={0}
-        color="#c0c0c0"
+        color="#9e9e9e"
         shineColor="#ffffff"
         spread={120}
         direction="left"
@@ -49,7 +49,7 @@ export const data = {
               </div>
 
               <div className="skill-container">
-                <img src="/assets/github.svg" alt="GitHub image" />
+                <img src="/assets/github.webp" alt="GitHub image" />
                 <h1 className="header-title">GitHub</h1>
                 <p className="description">Cloud hosting for Git repositories with pull requests, issue tracking and CI/CD integrations.</p>
               </div>

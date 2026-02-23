@@ -25,6 +25,7 @@ html, body {
     background: var(--primary);
     padding: 2.25rem 3rem;
     padding-bottom: 2.5rem;
+    max-width: 100%;
 }
 
 .main-info-subcontainer {
@@ -32,6 +33,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
     margin: 1.5rem 0;
+    max-width: 100%;
 }
 
 .my-image {
@@ -394,8 +396,8 @@ html, body {
 
     .tag {
         position: absolute;
-        top: 67.25%;
-        left: 39.5%;
+        top: 50%;
+        left: 52.5%;
     }
 
     .skills-board, .projects-board {
@@ -429,5 +431,21 @@ html, body {
     
     .faq-section {
         padding: 0 1.5rem;
+    }
+
+    .my-name {
+        visibility: hidden;
+        position: relative;
+    }
+
+    .my-name::after {
+        content: "Pedro A.";
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow-wrap: break-word;
+        word-break: break-all;
+        font-size: 0.725em;
     }
 }

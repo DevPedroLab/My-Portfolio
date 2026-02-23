@@ -21,7 +21,7 @@ export const ContactContent = () => (
                   disabled={false}
                 />
             </h2>
-            <p className="contact-description">Full-stack projects from <strong>~$80</strong>. Delivery in <strong>5-7 days</strong>. Clean code with 7-day support included.</p>
+            <p className="contact-description">Full-stack projects from <strong>~$150-$200.</strong> Delivery in <strong>7-14 days.</strong> Clean code.</p>
         </div>
         
         <div className="contact-card">
@@ -40,7 +40,7 @@ export const ContactContent = () => (
                   disabled={false}
                 />
             </h2>
-            <p className="contact-description">I reply within <strong>6-12 hours</strong>. Let's discuss your project via email or on Fiverr.</p>
+            <p className="contact-description">I reply within <strong>6-12 hours.</strong> Let's discuss your project on Fiverr.</p>
         </div>
         
         <div className="contact-card">
@@ -59,14 +59,11 @@ export const ContactContent = () => (
                   disabled={false}
                 />
             </h2>
-            <p className="contact-description"><strong>50% upfront, 50% on delivery</strong>. Unlimited revisions during development. Your satisfaction guaranteed.</p>
+            <p className="contact-description"><strong>50% upfront, 50% on delivery.</strong> Your satisfaction guaranteed.</p>
         </div>
     </div>
     
     <div className="contact-actions">
-        <a href="mailto:pedro.a.rodrigues7@gmail.com" className="contact-button primary">
-            <span aria-hidden="true" className="fa-solid fa-envelope"></span> Send Email
-        </a>
         <a href="https://www.fiverr.com/devpedro__/" target="_blank" rel="noopener noreferrer" className="contact-button secondary">
             <span aria-hidden="true" className="fa-solid fa-briefcase"></span> View Fiverr
         </a>
@@ -90,7 +87,7 @@ export const ContactContent = () => (
                   disabled={false}
                 />
                 </h3>
-                <p>Frontend + Backend, database setup (free tier), deployment, and 7-day support.</p>
+                <p>You can see on my Fiverr which package works better for you.</p>
             </div>
             <div className="faq-item">
                 <h3>
@@ -124,7 +121,7 @@ export const ContactContent = () => (
                   disabled={false}
                 />
                 </h3>
-                <p>Yes! You get access to my contact to track development in real-time.</p>
+                <p>Yes! You can contact me everytime to track development in real-time.</p>
             </div>
             <div className="faq-item">
                 <h3>
@@ -141,7 +138,7 @@ export const ContactContent = () => (
                   disabled={false}
                 />
                 </h3>
-                <p>Unlimited revisions during development. After delivery, minor fixes are free for 7 days.</p>
+                <p>The number of revisions varies for each package. The revisions is used only during development.</p>
             </div>
         </div>
     </div>
